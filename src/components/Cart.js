@@ -2,7 +2,7 @@ import {useState} from 'react';
 import './Cart.css'
 
 
-function CartTwo(props){
+function Cart(props){
     
     const [cartData, setCartData] = useState({cart: 0, products:[
         {
@@ -39,7 +39,7 @@ return(
             {cartData.products.length !== 0? <div>
                 <h2>Cart : {cartData.cart}</h2>
                   {/* <img src= {'./images'} alt="" ></img> */}
-                  <img src= {'../images/cart.jpg'} alt="" className='img' ></img>   
+                  <img src= {'/images/cart.jpg'} alt="" className='img' ></img>   
                 {cartData.products.map (item => {
                     return (<div>
                         <h3>{item.name} : {item.quantity}</h3> 
@@ -79,4 +79,4 @@ return(
     
 }
 
-export default CartTwo;
+export default Cart;
